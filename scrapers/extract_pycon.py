@@ -1,6 +1,7 @@
 from __future__ import print_function
 
 import os.path
+import os
 import pickle
 import datetime
 
@@ -41,8 +42,8 @@ def main():
     now = datetime.datetime.utcnow().isoformat() + "Z"  # 'Z' indicates UTC time
     print("Getting the upcoming 10 events")
 
-    cal_id_python_events = "j7gov1cmnqr9tvg14k621j7t5c@group.calendar.google.com"
-    cal_id_user_group = "3haig2m9msslkpf2tn1h56nn9g@group.calendar.google.com"
+    cal_id_python_events = os.environ['calendar_id']
+    cal_id_user_group = os.environ['group_id']
 
     items = []
 
